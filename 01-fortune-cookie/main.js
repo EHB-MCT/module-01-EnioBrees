@@ -14,11 +14,16 @@ const fortunes = [
 ];
 
 // 1. Select Elements
-let display = document.querySelector("#fortune-display");
 let button = document.querySelector("#cookie-btn");
+let display = document.querySelector("#fortune-display");
+
 
 // 2. Add event Listener
 //      generate a random index
+button.addEventListener("click", function () {
+    let randomIndex = Math.floor(Math.random() * fortunes.length);
+    display.innerText = fortunes[randomIndex];
+});
 //      get the fortune string
 //      update the display
 
